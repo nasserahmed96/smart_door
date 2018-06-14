@@ -1,0 +1,6 @@
+/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles/rebuild_cache.dir
+/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles/Smart_Door.dir
+/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles/edit_cache.dir
+/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/src/CMakeFiles/rebuild_cache.dir
+/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/src/CMakeFiles/faceDetection.dir
+/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/src/CMakeFiles/edit_cache.dir
