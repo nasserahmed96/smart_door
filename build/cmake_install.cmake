@@ -1,4 +1,4 @@
-# Install script for directory: /home/nasser/Graduation_Project/Source_Code/Smart_Door
+# Install script for directory: /home/nasser/myproject/Smart_Door
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/src/cmake_install.cmake")
+  include("/home/nasser/myproject/Smart_Door/build/src/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nasser/myproject/Smart_Door/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

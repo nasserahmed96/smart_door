@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nasser/Graduation_Project/Source_Code/Smart_Door
+CMAKE_SOURCE_DIR = /home/nasser/myproject/Smart_Door
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nasser/Graduation_Project/Source_Code/Smart_Door/build
+CMAKE_BINARY_DIR = /home/nasser/myproject/Smart_Door/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles /home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/myproject/Smart_Door/build/CMakeFiles /home/nasser/myproject/Smart_Door/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/myproject/Smart_Door/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -124,6 +124,32 @@ Smart_Door/fast:
 .PHONY : Smart_Door/fast
 
 #=============================================================================
+# Target rules for targets named SocketServer
+
+# Build rule for target.
+SocketServer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 SocketServer
+.PHONY : SocketServer
+
+# fast build rule for target.
+SocketServer/fast:
+	$(MAKE) -f src/CMakeFiles/SocketServer.dir/build.make src/CMakeFiles/SocketServer.dir/build
+.PHONY : SocketServer/fast
+
+#=============================================================================
+# Target rules for targets named NasserSockets
+
+# Build rule for target.
+NasserSockets: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NasserSockets
+.PHONY : NasserSockets
+
+# fast build rule for target.
+NasserSockets/fast:
+	$(MAKE) -f src/CMakeFiles/NasserSockets.dir/build.make src/CMakeFiles/NasserSockets.dir/build
+.PHONY : NasserSockets/fast
+
+#=============================================================================
 # Target rules for targets named faceDetection
 
 # Build rule for target.
@@ -135,6 +161,19 @@ faceDetection: cmake_check_build_system
 faceDetection/fast:
 	$(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/build
 .PHONY : faceDetection/fast
+
+#=============================================================================
+# Target rules for targets named faceRecognition
+
+# Build rule for target.
+faceRecognition: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 faceRecognition
+.PHONY : faceRecognition
+
+# fast build rule for target.
+faceRecognition/fast:
+	$(MAKE) -f src/CMakeFiles/faceRecognition.dir/build.make src/CMakeFiles/faceRecognition.dir/build
+.PHONY : faceRecognition/fast
 
 main.o: main.cpp.o
 
@@ -172,7 +211,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Smart_Door"
 	@echo "... edit_cache"
+	@echo "... SocketServer"
+	@echo "... NasserSockets"
 	@echo "... faceDetection"
+	@echo "... faceRecognition"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

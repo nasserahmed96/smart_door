@@ -1,0 +1,119 @@
+#include <android/log.h>
+#include <arpa/inet.h>
+#include "stdlib.h"
+#include "stdio.h"
+#include "sys/types.h"
+#include "sys/socket.h"
+#include "sys/unistd.h"
+#include "netdb.h"
+#include "netinet/in.h"
+#include "string.h"
+#include "errno.h"
+#include "c_sockets_nasser.h"
+
+
+int numBytes;
+
+void bindSocket(){
+	struct sockaddr_in peerAddr;
+	peerAddr.sin_family = AF_INET;
+	peerAddr.sin_port = htons(1996);
+	peerAddr.sin_addr.s_addr =inet_addr("192.168.1.4");
+	int yes = 1;
+	__android_log_print(ANDROID_LOG_DEBUG, "Debugging", "Start creating server");
+	if((*socket_desc =socket(AF_INET, SOCK_STREAM, 0)) == -1){
+		__android_log_print(ANDROID_LOG_ERROR, "Socket Error",gai_strerror(errno));
+	}
+	else{
+		if((setsockopt(*socket_desc, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int))) == -1){
+			__android_log_print(ANDROID_LOG_ERROR, "Socket Error",gai_strerror(errno));
+		       exit(1);
+		}
+		__android_log_print(ANDROID_LOG_DEBUG, "Debugging", "Socket created");
+		if((bind(*socket_desc, servinfo -> ai_addr, servinfo -> ai_addrlen)) == -1){
+			__android_log_print(ANDROID_LOG_ERROR, "Binding Error", gai_strerror(errno));
+		}
+		else{
+			__android_log_print(ANDROID_LOG_DEBUG, "Debugging", "Socket bound with descriptor %d", *socket_desc);
+			if((listen(*socket_desc, BACKLOG)) == -1){
+				__android_log_print(ANDROID_LOG_ERROR, "Listening Error", gai_strerror(errno));
+			}
+		}
+	}
+
+}
+
+
+void startServer(){	
+	strcpy(msg, "");
+	printf("Waiting for connections.....\n");
+	while(strcmp(msg, "close") != 0){	
+		struct sockaddr_storage their_addr;
+		socklen_t sin_size = sizeof their_addr;
+		if((*new_fd = accept(*socket_desc, (struct sockaddr *)&their_addr, &sin_size)) == -1){
+			perror("accept");
+			exit(1);
+		}
+		if(!fork())
+		{
+			printf("this is fd before sending %d\n", *new_fd);	
+			recvMsg(*new_fd);
+			sendMsg("Bism Allah", *new_fd);
+			close(*new_fd);
+			exit(0);
+		}
+	}
+	close(*new_fd);
+	exit(0);
+}
+
+
+void connectToServer(){
+	struct sockaddr_in peerAddr;
+	peerAddr.sin_family = AF_INET;
+	peerAddr.sin_port = htons(1996);
+	peerAddr.sin_addr.s_addr =inet_addr("192.168.1.3");
+	if((*socket_desc = socket(AF_INET, SOCK_STREAM, 0)) == -1){
+		__android_log_print(ANDROID_LOG_ERROR, "Socket Error: ",gai_strerror(errno));
+	}else{
+		if((setsockopt(*socket_desc, SOL_SOCKET, SO_REUSEADDR, 1, sizeof(int))) == -1) {
+			__android_log_print(ANDROID_LOG_ERROR, "Socket Error: ", gai_strerror(errno));
+		}else{
+			if(connect(*socket_desc, (struct sockaddr *)&peerAddr, sizeof(peerAddr)) == -1){
+				__android_log_print(ANDROID_LOG_ERROR, "Socket Error: Connect", gai_strerror(errno));
+			}
+            else{
+                sendMsg("Open", *socket_desc);
+            }
+
+		}
+	}
+	__android_log_print(ANDROID_LOG_DEBUG, "Debugging: ", "Socket created");
+
+}
+
+void sendMsg(char *msg, int fd){
+    int sentBytes = 10;
+    while(numBytes < sentBytes){
+        if((numBytes = send(fd, msg, sentBytes, 0)) == -1){
+            __android_log_print(ANDROID_LOG_ERROR, "Message sending:", "File %d Error: %s", *socket_desc, strerror(errno));
+            exit(1);
+        }else{
+            sentBytes = sentBytes - numBytes;
+        }
+    }
+    close(*socket_desc);
+    fd = 0;
+    __android_log_print(ANDROID_LOG_DEBUG, "Sending: ", "Message sent");
+}
+
+void recvMsg(int fd){
+	int numbytes;
+	printf("%d\n", fd);
+	if((numbytes = recv(fd, msg, MAXDATASIZE - 1, 0)) == -1){
+		perror("recv");
+		exit(1);
+	}
+	msg[numbytes] = '\0';
+	printf("recieved %s\n", msg);
+}

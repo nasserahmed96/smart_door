@@ -1,4 +1,4 @@
-# Install script for directory: /home/nasser/Graduation_Project/Source_Code/Smart_Door/src
+# Install script for directory: /home/nasser/myproject/Smart_Door/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

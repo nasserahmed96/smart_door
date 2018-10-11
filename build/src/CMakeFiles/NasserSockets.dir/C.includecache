@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/c_sockets_nasser.h
+stdlib.h
+../include/stdlib.h
+stdio.h
+../include/stdio.h
+sys/types.h
+../include/sys/types.h
+sys/socket.h
+../include/sys/socket.h
+netdb.h
+../include/netdb.h
+netinet/in.h
+../include/netinet/in.h
+string.h
+../include/string.h
+errno.h
+../include/errno.h
+
+/home/nasser/myproject/Smart_Door/src/c_sockets_nasser.c
+stdlib.h
+/home/nasser/myproject/Smart_Door/src/stdlib.h
+stdio.h
+/home/nasser/myproject/Smart_Door/src/stdio.h
+sys/types.h
+/home/nasser/myproject/Smart_Door/src/sys/types.h
+sys/socket.h
+/home/nasser/myproject/Smart_Door/src/sys/socket.h
+netdb.h
+/home/nasser/myproject/Smart_Door/src/netdb.h
+netinet/in.h
+/home/nasser/myproject/Smart_Door/src/netinet/in.h
+string.h
+/home/nasser/myproject/Smart_Door/src/string.h
+errno.h
+/home/nasser/myproject/Smart_Door/src/errno.h
+c_sockets_nasser.h
+/home/nasser/myproject/Smart_Door/src/c_sockets_nasser.h
+

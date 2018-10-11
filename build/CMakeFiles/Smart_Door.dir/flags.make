@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/nasser/Graduation_Project/Source_Code/Smart_Door/include -isystem /usr/local/include -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/nasser/myproject/Smart_Door/include -isystem /usr/local/include -isystem /usr/local/include/opencv 
 

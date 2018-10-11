@@ -8,8 +8,11 @@ LINK_DIRECTORIES(${OpenCV_LINK_DIR})
 
 #Starting from here define your own library
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+INCLUDE_DIRECTORIES(/usr/local/include)
+LINK_DIRECTORIES(/usr/local/lib)
 ADD_SUBDIRECTORY(src)
-set(EXTRA_LIBS ${EXTRA_LIBS} faceDetection ${OpenCV_LIBS})
+
+set(EXTRA_LIBS ${EXTRA_LIBS} faceDetection faceRecognition wiringPi wiringPiDev SocketServer NasserSockets pthread  ${OpenCV_LIBS})
 
 
 SET(MAIN main.cpp)

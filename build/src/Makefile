@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nasser/Graduation_Project/Source_Code/Smart_Door
+CMAKE_SOURCE_DIR = /home/nasser/myproject/Smart_Door
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nasser/Graduation_Project/Source_Code/Smart_Door/build
+CMAKE_BINARY_DIR = /home/nasser/myproject/Smart_Door/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles /home/nasser/Graduation_Project/Source_Code/Smart_Door/build/src/CMakeFiles/progress.marks
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/Graduation_Project/Source_Code/Smart_Door/build/CMakeFiles 0
+	cd /home/nasser/myproject/Smart_Door/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/myproject/Smart_Door/build/CMakeFiles /home/nasser/myproject/Smart_Door/build/src/CMakeFiles/progress.marks
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nasser/myproject/Smart_Door/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,52 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/nasser/myproject/Smart_Door/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
+src/CMakeFiles/SocketServer.dir/rule:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/SocketServer.dir/rule
+.PHONY : src/CMakeFiles/SocketServer.dir/rule
+
+# Convenience name for target.
+SocketServer: src/CMakeFiles/SocketServer.dir/rule
+
+.PHONY : SocketServer
+
+# fast build rule for target.
+SocketServer/fast:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/SocketServer.dir/build.make src/CMakeFiles/SocketServer.dir/build
+.PHONY : SocketServer/fast
+
+# Convenience name for target.
+src/CMakeFiles/NasserSockets.dir/rule:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/NasserSockets.dir/rule
+.PHONY : src/CMakeFiles/NasserSockets.dir/rule
+
+# Convenience name for target.
+NasserSockets: src/CMakeFiles/NasserSockets.dir/rule
+
+.PHONY : NasserSockets
+
+# fast build rule for target.
+NasserSockets/fast:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/NasserSockets.dir/build.make src/CMakeFiles/NasserSockets.dir/build
+.PHONY : NasserSockets/fast
+
+# Convenience name for target.
 src/CMakeFiles/faceDetection.dir/rule:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/faceDetection.dir/rule
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/faceDetection.dir/rule
 .PHONY : src/CMakeFiles/faceDetection.dir/rule
 
 # Convenience name for target.
@@ -122,8 +152,50 @@ faceDetection: src/CMakeFiles/faceDetection.dir/rule
 
 # fast build rule for target.
 faceDetection/fast:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/build
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/build
 .PHONY : faceDetection/fast
+
+# Convenience name for target.
+src/CMakeFiles/faceRecognition.dir/rule:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/faceRecognition.dir/rule
+.PHONY : src/CMakeFiles/faceRecognition.dir/rule
+
+# Convenience name for target.
+faceRecognition: src/CMakeFiles/faceRecognition.dir/rule
+
+.PHONY : faceRecognition
+
+# fast build rule for target.
+faceRecognition/fast:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceRecognition.dir/build.make src/CMakeFiles/faceRecognition.dir/build
+.PHONY : faceRecognition/fast
+
+c_sockets_nasser.o: c_sockets_nasser.c.o
+
+.PHONY : c_sockets_nasser.o
+
+# target to build an object file
+c_sockets_nasser.c.o:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/NasserSockets.dir/build.make src/CMakeFiles/NasserSockets.dir/c_sockets_nasser.c.o
+.PHONY : c_sockets_nasser.c.o
+
+c_sockets_nasser.i: c_sockets_nasser.c.i
+
+.PHONY : c_sockets_nasser.i
+
+# target to preprocess a source file
+c_sockets_nasser.c.i:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/NasserSockets.dir/build.make src/CMakeFiles/NasserSockets.dir/c_sockets_nasser.c.i
+.PHONY : c_sockets_nasser.c.i
+
+c_sockets_nasser.s: c_sockets_nasser.c.s
+
+.PHONY : c_sockets_nasser.s
+
+# target to generate assembly for a file
+c_sockets_nasser.c.s:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/NasserSockets.dir/build.make src/CMakeFiles/NasserSockets.dir/c_sockets_nasser.c.s
+.PHONY : c_sockets_nasser.c.s
 
 face_detection.o: face_detection.cpp.o
 
@@ -131,7 +203,7 @@ face_detection.o: face_detection.cpp.o
 
 # target to build an object file
 face_detection.cpp.o:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/face_detection.cpp.o
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/face_detection.cpp.o
 .PHONY : face_detection.cpp.o
 
 face_detection.i: face_detection.cpp.i
@@ -140,7 +212,7 @@ face_detection.i: face_detection.cpp.i
 
 # target to preprocess a source file
 face_detection.cpp.i:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/face_detection.cpp.i
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/face_detection.cpp.i
 .PHONY : face_detection.cpp.i
 
 face_detection.s: face_detection.cpp.s
@@ -149,8 +221,62 @@ face_detection.s: face_detection.cpp.s
 
 # target to generate assembly for a file
 face_detection.cpp.s:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/face_detection.cpp.s
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceDetection.dir/build.make src/CMakeFiles/faceDetection.dir/face_detection.cpp.s
 .PHONY : face_detection.cpp.s
+
+face_recognition.o: face_recognition.cpp.o
+
+.PHONY : face_recognition.o
+
+# target to build an object file
+face_recognition.cpp.o:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceRecognition.dir/build.make src/CMakeFiles/faceRecognition.dir/face_recognition.cpp.o
+.PHONY : face_recognition.cpp.o
+
+face_recognition.i: face_recognition.cpp.i
+
+.PHONY : face_recognition.i
+
+# target to preprocess a source file
+face_recognition.cpp.i:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceRecognition.dir/build.make src/CMakeFiles/faceRecognition.dir/face_recognition.cpp.i
+.PHONY : face_recognition.cpp.i
+
+face_recognition.s: face_recognition.cpp.s
+
+.PHONY : face_recognition.s
+
+# target to generate assembly for a file
+face_recognition.cpp.s:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/faceRecognition.dir/build.make src/CMakeFiles/faceRecognition.dir/face_recognition.cpp.s
+.PHONY : face_recognition.cpp.s
+
+socket_server.o: socket_server.c.o
+
+.PHONY : socket_server.o
+
+# target to build an object file
+socket_server.c.o:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/SocketServer.dir/build.make src/CMakeFiles/SocketServer.dir/socket_server.c.o
+.PHONY : socket_server.c.o
+
+socket_server.i: socket_server.c.i
+
+.PHONY : socket_server.i
+
+# target to preprocess a source file
+socket_server.c.i:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/SocketServer.dir/build.make src/CMakeFiles/SocketServer.dir/socket_server.c.i
+.PHONY : socket_server.c.i
+
+socket_server.s: socket_server.c.s
+
+.PHONY : socket_server.s
+
+# target to generate assembly for a file
+socket_server.c.s:
+	cd /home/nasser/myproject/Smart_Door/build && $(MAKE) -f src/CMakeFiles/SocketServer.dir/build.make src/CMakeFiles/SocketServer.dir/socket_server.c.s
+.PHONY : socket_server.c.s
 
 # Help Target
 help:
@@ -159,11 +285,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... faceDetection"
+	@echo "... SocketServer"
 	@echo "... edit_cache"
+	@echo "... NasserSockets"
+	@echo "... faceDetection"
+	@echo "... faceRecognition"
+	@echo "... c_sockets_nasser.o"
+	@echo "... c_sockets_nasser.i"
+	@echo "... c_sockets_nasser.s"
 	@echo "... face_detection.o"
 	@echo "... face_detection.i"
 	@echo "... face_detection.s"
+	@echo "... face_recognition.o"
+	@echo "... face_recognition.i"
+	@echo "... face_recognition.s"
+	@echo "... socket_server.o"
+	@echo "... socket_server.i"
+	@echo "... socket_server.s"
 .PHONY : help
 
 
@@ -175,6 +313,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/nasser/Graduation_Project/Source_Code/Smart_Door/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/nasser/myproject/Smart_Door/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

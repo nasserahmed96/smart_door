@@ -6,11 +6,16 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/core.hpp>
 #include <iostream>
-
+#include "face_recognition.hpp"
 using namespace cv;
 
 
+typedef struct {
+	Mat detected_face;
+	bool detected;
+}Face;
+
 void testFunction();
 bool checkCascades();
-bool faceDetection();
+Face faceDetection();
 #endif

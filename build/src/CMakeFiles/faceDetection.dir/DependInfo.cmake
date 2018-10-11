@@ -4,13 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/nasser/Graduation_Project/Source_Code/Smart_Door/src/face_detection.cpp" "/home/nasser/Graduation_Project/Source_Code/Smart_Door/build/src/CMakeFiles/faceDetection.dir/face_detection.cpp.o"
+  "/home/nasser/myproject/Smart_Door/src/face_detection.cpp" "/home/nasser/myproject/Smart_Door/build/src/CMakeFiles/faceDetection.dir/face_detection.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include"
+  "/usr/local/include"
   )
 
 # Targets to which this target links.
