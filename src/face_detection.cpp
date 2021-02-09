@@ -60,7 +60,7 @@ Face faceDetection(){
 	//First deal with each frame alone
 	while(capture.read(frame)){
 		//Convert the frame to gray scale image
-		cvtColor(frame, frame, CV_BGR2GRAY);
+		cvtColor(frame, frame, cv::COLOR_BGR2GRAY);
 		if(frame.empty()){
 			cerr<<"no frame captured, aborting\n";
 			return face;

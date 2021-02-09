@@ -1,2 +1,0 @@
-/usr/bin/ar qc libNasserSockets.a  CMakeFiles/NasserSockets.dir/c_sockets_nasser.c.o
-/usr/bin/ranlib libNasserSockets.a

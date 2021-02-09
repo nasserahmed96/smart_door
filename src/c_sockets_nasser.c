@@ -168,6 +168,6 @@ void recvFile(int fd){
 	 * file_recv is the file descriptor in the target machine which points to the new file
 	 */
 	//fwrite(buffer, sizeof(char), recv_size, file_recv);
-	//*/
-}
+	
+//}
 

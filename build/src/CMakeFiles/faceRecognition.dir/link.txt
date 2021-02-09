@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfaceRecognition.a  CMakeFiles/faceRecognition.dir/face_recognition.cpp.o
-/usr/bin/ranlib libfaceRecognition.a
